@@ -1,25 +1,41 @@
 {
-  "name": "tipalti-vision",
+  "name": "react",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Allensy/Tipalti-vision.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Allensy/Tipalti-vision/issues"
-  },
-  "homepage": "https://github.com/Allensy/Tipalti-vision#readme",
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
+  "main": "src/index.js",
   "dependencies": {
-    "giojs": "^2.2.2",
+    "@tweenjs/tween.js": "18.6.4",
+    "accessor-fn": "1.3.1",
+    "d3-array": "3.1.1",
+    "firebase": "9.6.1",
+    "kapsule": "1.13.5",
+    "parcel-bundler": "^1.6.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "4.0.0",
+    "three": "0.135.0",
+    "three-globe": "2.21.3",
+    "three-render-objects": "1.26.4",
+    "three-trackballcontrols": "0.9.0"
   },
   "devDependencies": {
-    "typescript": "^4.5.4"
-  }
+    "@babel/runtime": "7.13.8",
+    "typescript": "4.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
