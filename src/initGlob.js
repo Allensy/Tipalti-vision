@@ -7,7 +7,7 @@ async function init(transactions = []) {
   return tg
     .globeImageUrl("https://unpkg.com/three-globe@2.21.3/example/img/earth-day.jpg")
     .arcsData(res)
-    .arcColor("color")
+    .arcColor((res)=> res.color || ["blue", "blue"])
     .arcDashLength((res) => {
       return res.amount/10000000;
     })

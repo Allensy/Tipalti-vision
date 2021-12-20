@@ -1,6 +1,4 @@
-import {
-  getDocs, onSnapshot
-} from "firebase/firestore";
+import { getDocs, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import * as THREE from "three";
 import TrackballControls from "three-trackballcontrols";
@@ -18,12 +16,13 @@ export default function App() {
       res.forEach((item) => {
         newItems.push(item.data());
       });
-      console.log(newItems)
-      const archs = await init(newItems);
+      console.log(newItems);
+      const archs = await init([...newItems]);
       const renderer = new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.getElementById("globe").appendChild(renderer.domElement);
-
+      
+      // location.reload()
       // Setup scene
       const scene = new THREE.Scene();
       scene.add(archs);
@@ -50,8 +49,8 @@ export default function App() {
         tbControls.update();
         renderer.render(scene, camera);
         requestAnimationFrame(animate);
+        setTransactions([...newItems]);
       })();
-      setTransactions([...newItems]);
     });
   }, []);
   return (

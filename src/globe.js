@@ -33,7 +33,6 @@ const getCities = (db) => async () => {
     arr.push(item.data());
   });
   return arr;
-  return [arr[0]];
 };
 const getTranactions = getCities(db);
 export { getTranactions, db, transactionCollection };
